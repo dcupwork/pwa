@@ -1,0 +1,13 @@
+#addWallet {
+    position: fixed;
+    display: grid;
+    grid-template-columns: auto auto;
+    bottom: 90px;
+    width: 100%;
+    background-color: #e6e5e5;
+    padding: 10px;
+    text-align: center;
+    margin-top: 80px;
+  left: 0;
+  }
+  
