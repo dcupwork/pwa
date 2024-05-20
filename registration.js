@@ -1,10 +1,10 @@
 
 if (localStorage.getItem("ids") == null){
-    login()
+    //login()
 } else {
-    contacts()
+    //contacts()
 }
-
+contacts()
 function login() {
 
     var obj = [];
