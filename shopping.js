@@ -177,7 +177,7 @@ message.text = 'Привет, NFC!';
 
 // Отправить данные через NFC
 nfc.write(message, () => {
-  console.log('Данные отправлены');
+  alert('Данные отправлены');
 });
 }
 
@@ -191,7 +191,7 @@ nfc.on('read', (tag) => {
   const data = tag.text;
 
   // Обработать полученные данные
-  console.log('Прочитанные данные:', data);
+  alert('Прочитанные данные:', data);
 });
 }
 function searchKeyword() {
