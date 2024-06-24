@@ -62,7 +62,8 @@ function shopping() {
                         <div id="nav-button" onclick="orders()">Orders</div>
                         
                         <div id="nav-button" onclick="list()">My Shop</div>
-                        
+                         <div id="nav-button" onclick="send()">Send</div>
+                        <div id="nav-button" onclick="receive()">Receive</div>
                         
                         
                     </div>
@@ -164,7 +165,35 @@ function pricedown() {
 
 
 }
+function send(){
+    // Получить доступ к NFC API
+const nfc = window.nfc;
 
+// Создать объект NFCMessage
+const message = new nfc.NFCMessage();
+
+// Записать данные в объект
+message.text = 'Привет, NFC!';
+
+// Отправить данные через NFC
+nfc.write(message, () => {
+  console.log('Данные отправлены');
+});
+}
+
+function receive(){
+    // Получить доступ к NFC API
+const nfc = window.nfc;
+
+// Создать обработчик события для чтения NFC-тега
+nfc.on('read', (tag) => {
+  // Читать данные из NFC-тега
+  const data = tag.text;
+
+  // Обработать полученные данные
+  console.log('Прочитанные данные:', data);
+});
+}
 function searchKeyword() {
     obj2.sortlist = []
     setItem({ id: id, obj: obj2 })
